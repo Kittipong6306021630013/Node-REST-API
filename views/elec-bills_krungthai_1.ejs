@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--css-->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!--fonts-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+                                        
+        <title>test</title>
+    </head>
+
+    <body>
+        <%- include('navbar') %>
+        <!--กลับหน้าหลัก-->
+        <div class="container ">
+            <img src="img/index-pic3.png"   class="img size-pic3">
+            <a href="/elec_payment_ktb"><p> | ย้อนกลับ</p></a>
+        </div>
+        <!--ข้อมูลการชำระ-->   
+        <div class="container content ">
+            <div class="block-1">
+                <h2>ค่าไฟประจำเดือนมีนาคม ปี 2565</h2>
+            </div>
+            <div class="block-1">
+                <% if(user.Status == false){%>
+                    <p class="box red-box">สถานะ : ค้างชำระ</p>
+                <% }else{ %>
+                    <p class="box green-box">สถานะ : ชำระแล้ว</p>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="container-3 content ">
+            <div class="line"></div>
+        </div>
+
+
+        <div class="container content-right info ">
+            <div class="block-1 ">
+                <h3>ห้อง <%= user.room %></h3>
+            </div>
+        </div>
+
+        <div class="container content info color">
+            <div class="block-1">
+                <p>ยอดชำระ</p>
+            </div>
+            <div class="block-1">
+                <p><c-red><%= ((user.elec_use/user.roomate)*4).toFixed(0) %> บาท</c-red></p>
+            </div>
+        </div> 
+
+        <div class="container content">
+            <div class="block-1">
+                <p class="box green-box">ยืนยันการชำระเงิน</p>
+             </div>
+        </div>
+
+        
+        <div class="container content info color">
+            <div class="block-1">
+                <p>ท่านได้เลือกชำระเงินผ่านบัญชี :</p>
+            </div>
+        </div> 
+            
+        
+        <div class="container content-left ">
+            <div class="block">
+                <img src="img/Krungthai.png"  class="img size-pic4 ">
+                <h2>กรุงไทย</h2>
+            </div>
+            <div class="block-2">
+                <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+                <p> สาขามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+                <p> เลขบัญชี 020-2-xxxxx-x </p>
+            </div>
+        </div> 
+            
+    
+        <div class="container content-right info ">
+            <div class="block-1">
+                <p>ท่านได้เลือกชำระเงินผ่านบัญชี :</p>
+            </div>
+              
+            <form method="post" action="/upload" enctype="multipart/form-data">  
+                    <input type="hidden" name="update_id" value="<%= user._id %>" > 
+                    <input type="file" class="form-control" name="ktb" id="myfile" value="<%= user._id %>" required> 
+                    <label for="myfile" class="btn red-box">อัพโหลดไฟล์<img src="img/upload.png"   class="img size-pic3 upload"></label>
+                       
+        </div> 
+
+            <div class="container content-right info ">
+                <span><h1>Choosefile:
+                    <span id="file-name">None</h1></span>
+                </span>
+            </div> 
+        
+            <div class="container content-center">
+                <div class="block-1">
+                    <button class="btn red-box" type="submit" >ยินยันการชำระ</button>
+                </div>
+            </div>
+        </form>    
+        <script src="upload.js"></script>
+    </body>
+    <footer>
+    </footer>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--css-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!--fonts-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+                                        
+        <title>test</title>
+    </head>
+
+    <body>
+        <%- include('navbar') %>
+        
+        <!--กลับหน้าหลัก-->
+        <div class="container ">
+            <img src="img/index-pic3.png"   class="img size-pic3">
+            <a href="/"><p> | หน้าหลัก</p></a>
+        </div>
+        <!--ข้อมูลการชำระ-->   
+        <div class="container content ">
+            <div class="block-1">
+                <h2>ค่าไฟประจำเดือนมีนาคม ปี 2565</h2>
+            </div>
+            <div class="block-1">
+                <% if(user.Status == false){%>
+                    <p class="box red-box">สถานะ : ค้างชำระ</p>
+                <% }else{ %>
+                    <p class="box green-box">สถานะ : ชำระแล้ว</p>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="container-3 content ">
+            <div class="line"></div>
+        </div>
+
+
+        <div class="container content-right info">
+            <div class="block-1">
+                <h3>ห้อง<%= user.room %></h3>
+            </div>
+        </div>
+
+        <div class="container content info color">
+            <div class="block-1">
+                <p><%= user.name %></p>
+            </div>
+        </div>
+    
+        <div class="container content info">
+            <div class="block-1">
+                <p>จำนวนหน่วยที่ใช้ไปทั้งหมด</p>
+            </div>
+            <div class="block-1">
+                <p><%= user.elec_use %> หน่วย</p>
+            </div>
+        </div>
+    
+        <div class="container content info color">
+            <div class="block-1">
+                <p>ราคาต่อหน่วย</p>
+            </div>
+            <div class="block-1">
+                <p>4 บาท</p>
+            </div>
+        </div>
+    
+        
+        <div class="container content info">
+            <div class="block-1">
+                <p>รวมทั้งสิ้น</p>
+            </div>
+            <div class="block-1">
+                <p><%= user.elec_use * 4 %> บาท</p>
+            </div>
+        </div>
+
+        <div class="container content info color">
+            <div class="block-1">
+                <p>สมาชิกในห้อง</p>
+            </div>
+
+            <div class="block-1">
+                <p><%= user.roomate %> คน</p>
+            </div>
+        </div>
+
+        <div class="container content info">
+            <div class="block-1">
+                <p>ต้องจ่าย</p>
+            </div>
+            <div class="block-1">
+                <p><c-red><%= ((user.elec_use/user.roomate)*4).toFixed(0) %> บาท</c-red></p>
+            </div>
+        </div>
+
+        <div class="container content-center">
+            <div class="block-1">
+               <p><a href="/elec_payment" class="box red-box">ชำระเงิน</a></p> 
+            </div>
+        </div>
+    </body>
+    <footer>    
+    </footer>
+    
+</html>
