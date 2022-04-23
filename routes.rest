@@ -1,0 +1,18 @@
+GET http://localhost:3000/
+         
+###
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "userID": "6306021639876@fitm.kmutnb.ac.th",
+    "password": "pwd9876",
+    "name": "test",
+    "room": 216,
+    "elec_use":145,
+    "roomate":1,
+    "Status":false,
+    "image" : ""
+}
+###
+POST http://localhost:3000/upload

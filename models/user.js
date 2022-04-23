@@ -1,6 +1,7 @@
 
 const mongoose = require('mongoose')
 
+
 const userSchema = new mongoose.Schema({
     userID: String,
     password: String,
@@ -12,4 +13,9 @@ const userSchema = new mongoose.Schema({
     image : String
         
   })
-module.exports = mongoose.model("User",userSchema)
+
+//สร้างโมเดล
+let Users = mongoose.model("User",userSchema)
+
+//ส่งออกโมเดล
+module.exports = Users
