@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: cover;
+    background-color: #c7222f;
+    font-family: 'Kanit', sans-serif;   
+}
+
+.container{
+    height: auto;
+    display:flex;
+}
+
+img{
+    width: 40%;
+    height: 970px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+}
+
+.content{
+    width: 100%;
+    margin:0px ;
+    
+}
+
+.box{
+   
+    width: 100%;
+    height: 300px;
+    margin:100px 200px 0px;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Kanit', sans-serif;   
+    font-size: 15px;
+    color: white;
+    font-weight: 100;
+  
+}
+
+h2{
+    font-family: 'Kanit', sans-serif;   
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+  
+}
+
+h3{
+    font-family: 'Kanit', sans-serif;   
+    font-size: 35px;
+    color: white;
+    font-weight: 900;
+    
+}
+
+h4{
+    font-family: 'Kanit', sans-serif;   
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    
+}
+
+.line{
+    
+    align-items: center;
+    cursor: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: auto;
+    margin: 40px 0px 40px;
+}
+
+input[type=text], input[type=password] {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+
+.form_box{
+    margin : 50px 30px 0px;
+    
+}
+
+.form_box1{
+    margin : 0px 30px ;
+    
+}
+
+.btn{
+    background-color: #898080;
+    font-family: 'Kanit',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 15px 60px;
+    border: 0px;
+    margin: 50px 20px 10px ;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color:black;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    text-decoration-color:white ;
+}
+
+.bottom-right{
+    position:absolute;
+    bottom:0px;
+    right:0px;
+}
+
+.top-left{
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color: unset;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    background-color: unset;
+   
+}

@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+
+                
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+
+nav{
+    background: linear-gradient(-45deg,#ed213a,#ec475a);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.73);
+    -webkit-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.73);
+    -moz-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.73);  
+    
+}
+nav h2{
+    margin: 0px 20px;
+    
+    color:white;
+}
+nav li{
+    list-style: none;
+}
+
+nav h2 a{
+    font-family: 'Kanit', sans-serif; 
+    text-decoration: none;
+    color : white;
+    font-size: 20px;
+    margin: 0px 15px;
+    transition: .3s ease-in-out; 
+}
+
+nav h2 a:hover{
+    color: black;
+}
+
+
+nav ul{
+    display: flex;
+
+}
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    font-family: 'Kanit', sans-serif;   
+    font-size: 20px;
+    text-decoration: none;
+    color : white;
+    margin : 15px 30px 15px 0px ;
+    transition: .3s ease-in-out; 
+
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
+
+.container{
+    max-width: 1800px;
+    margin: 40px 50px 0px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    
+}
+
+.container-3{
+    max-width: 1800px;
+    margin: 20px 100px;
+    padding: 0px;
+    position: relative;
+    display: flex;
+    
+}
+
+
+
+
+.container h4{
+    text-align: center;
+}
+ 
+.img{
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+    object-fit: cover;
+}
+
+.text-box{
+    position:absolute;
+    width: 40%;
+    height: 400px;
+    background-color : rgba(195, 199, 200, 0.8);
+    top: 10px;
+    left: 10px;
+    text-align: center;
+    
+    
+}
+
+.text-in-box{
+    margin : 60px 10px 35px ;
+    
+}
+
+h1{
+    font-family: 'Kanit', sans-serif;   
+    font-size: 20px;
+    color: black;
+    font-weight: 900;
+}
+h2{
+    font-family: 'Kanit', sans-serif;   
+    font-size: 30px;
+    color: black;
+    font-weight: 900;
+}
+
+h3{
+    font-family: 'Kanit', sans-serif;   
+    font-size: 35px;
+    color: black;
+    font-weight: 900;
+    
+}
+
+h4{
+    font-family: 'Kanit', sans-serif;   
+    font-size: 40px;
+    color: black;
+    font-weight: 900;
+    
+}
+
+p{
+    font-family: 'Kanit',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    margin :6px;
+}
+
+p c-red{
+    color: #ec2e2e;
+}
+
+.btn{
+    background-color: #fcff53;
+    font-family: 'Kanit',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: 15px 30px;
+    border: 0px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.box{
+   
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: 0px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.red-box{
+    background-color: #ed213a;
+    color: white;
+    
+}
+.green-box{
+    background-color: #12A72A;
+}
+
+.btn:hover {opacity: 0.6;}
+
+.btn:active {
+  opacity: 0.6;
+  transform: translateY(4px);
+}
+
+
+.icon{
+    position: absolute;
+    background: none;
+    right: 50px;
+    top: 30%; 
+    width: 200px;
+    object-fit: cover;
+}
+
+.container-1{
+    max-width: 1800px;
+    margin: 0 ;
+    position: relative;
+    display: flex;
+    padding : 0px 30px;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    
+}
+
+.content{
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 300px
+}
+
+
+.content-right{
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px 300px
+}
+.content-left{
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 300px
+}
+
+
+.content-center{
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.info{
+    
+    border-radius: 5px;
+    margin-top: 1px;
+    background-color: white;
+}
+
+.color{
+    background-color: #d8d8d8;
+}
+
+
+.container-2 a{
+    color:rgb(82, 79, 79);
+    margin: 50px 0px;
+}
+.container-2 img{
+    color:black;
+   
+}
+.correct-icon{
+    margin: -10px -30px;
+    width: 10%;
+
+}
+
+
+.bts{
+    margin :15 30 15 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.size-pic3{
+    width: auto;
+    height: 40px;
+  
+}
+
+.upload{
+    top:10px;
+    left: 2px;
+}
+
+.size-pic4{
+    width: auto;
+    height: 200px;
+    margin-top: 60px;
+    object-fit: cover;
+}
+
+.container-2{
+    max-width: 1800px;
+    margin: 0 auto;
+    display:flex;
+    padding-left : 30px;
+    justify-content: center;
+    object-fit: cover;
+    
+
+}
+
+.container-2 h4{
+    margin: 60px 0px;
+}
+
+.block{
+    width: 300px;
+    margin: 0px 50px;
+    display: block;
+    text-align: center;
+    cursor:unset; 
+}
+
+.block-1{
+    width: auto;
+    
+}
+
+.block-2{
+    width: 500px;
+    margin: 80px 0px;
+    padding: 30px;
+    display: block;
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 5px ;
+}
+
+.block-3{
+    text-align: center;
+    
+}
+.container-2 .block-1{
+    justify-content: space-between;
+}
+.block:hover h3{
+    color: red;
+}
+
+.line{
+    
+    align-items: center;
+    cursor: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: auto;
+}
+span{
+    margin-right: 20px;
+}
+input#myfile{
+    display: none;
+    cursor: pointer;
+
+}
+
+footer{
+    width: auto;
+    height: 100px;
+}
+
+
+@media screen and (max-width: 1087px){
+
+    p{
+        font-size:18px;
+    }
+    
+    h3{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    h4{
+        margin: 0 auto;
+        text-align: center;
+    }
+ 
+    .container-2{
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .block{
+        
+        margin: 0 auto;
+        border-bottom: 1px solid black;
+    }
+   
+    .line{
+        border: none;
+    }
+       
+    
+}

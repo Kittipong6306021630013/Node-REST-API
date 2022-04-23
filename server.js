@@ -11,9 +11,28 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
 
+app.set('views',path.join(__dirname,'views'))
+app.set('view engine','ejs')
 app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
-const subscribersRouter = require('./routes/subscribers')
-app.use('/subscribers', subscribersRouter)
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
+
+app.use(
+  session({
+    secret: 'my_super_secret$%@#$#fsdfqew',
+    resave: false,
+    saveUninitialized: false
+  })
+)
+
+
+app.use(express.json(Router))
+
+const Router = require('./routes/route')
+app.use(router)
 
 app.listen(3000, () => console.log('Server Started'))
